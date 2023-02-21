@@ -1,11 +1,18 @@
+@google_search
 Feature: ilk feature file
-
+    @iphone
     Scenario: TC01_google_iphone_arama
         Given kullanici google gider
         When kullanici iphone için arama yapar
         Then sonuclarda iphone oldugunu dogrular
-
-#  1. Her feature file, Feature: kelimesi ile baslamak zorundadir
+        Then close the application
+    @tesla
+    Scenario: TC02_google_tesla_arama
+        Given kullanici google gider
+        When kullanici tesla için arama yapar
+        Then sonuclarda tesla oldugunu dogrular
+        Then close the application
+#  1. Her feature file, Feature: kelimesi ile baslamak zorundadir.
 #  2. Her bir file da, yanliz bit Feature: kullanilabilir
 #  3. Senaryo(TEST CASE) olusturmak icin Scenario kelimesi kullanilir
 #  4. Birden fazla Scenario: kullanilabilir
@@ -14,4 +21,6 @@ Feature: ilk feature file
 #  7. Then -> Genelde son satirlarda, verification stepleri icin kullanilir
 #  8. And, When -> Genelde ara adimlarda baglar olarak kullanilir
 #  NOTE: Teknik olarak istenilen kelime isteniler step de kullanilabilir,
-#  ama anlam karmasasi olmamasi icin bu adimlar takip edilir
+#        ama anlam karmasasi olmamasi icin bu adimlar takip edilir
+#  9. Belirli Scenario lari calistirmak icin cucumber tags ler kullanilir
+#  tag ler Fetuature, Scenario, Scerio Outline, Examples kelimeleri ile birlikte kullanilabilir

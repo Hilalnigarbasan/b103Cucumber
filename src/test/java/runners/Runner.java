@@ -14,3 +14,4 @@ public class Runner {
 }
 //Bu sinif Test caseleri RUN etmek icin kullanilir
 //Ve konfigurasyonlar icin kullanilir
+
