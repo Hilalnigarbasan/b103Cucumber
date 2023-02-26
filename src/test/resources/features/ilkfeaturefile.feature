@@ -24,3 +24,7 @@ Feature: ilk feature file
 #        ama anlam karmasasi olmamasi icin bu adimlar takip edilir
 #  9. Belirli Scenario lari calistirmak icin cucumber tags ler kullanilir
 #  tag ler Fetuature, Scenario, Scerio Outline, Examples kelimeleri ile birlikte kullanilabilir
+#  10. Background: Her bir Scenario kelimesinden ONCE tek bir sefer calisir
+#  11. dryRun=false -> dryRun yokmus gibi normal sekilde calisir. Yani tum adimlari tek tetk browserda acar.
+#      dryRun=true  -> Yeni bir STEP(adim) eklendiginde sadece tanimlanmamis step definitions lari olusturmak icin kullanilir
+#      kullanilma sebebi zamandan tasarrufdur.

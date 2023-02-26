@@ -7,7 +7,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "./src/test/resources/features", //features folder path --> PATH OF FEATURES
-        glue = "stepdefinitions" //stepdefinitions path  --> PATH OF STEP DEFINITIONS
+        glue = "stepdefinitions", //stepdefinitions path  --> PATH OF STEP DEFINITIONS
+        tags = "@tesla or @iphone",
+        dryRun = false
+
 
 )
 public class Runner {
