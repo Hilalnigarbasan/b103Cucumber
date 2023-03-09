@@ -4,6 +4,7 @@ Feature: arama_feature_2
   Background: googlea_git
     Given kullanici google gider
 
+  @regression
   Scenario Outline: arama_testi
     When kullanici "<product>" için arama yapar
     Then sonuclarin "<product>" icerdigini dogrula
@@ -21,5 +22,5 @@ Feature: arama_feature_2
 
 #Scenario -> Scenario Outline
 #"" -> "<sutun_ismi>"
-#Example kelimesi Scenario Outline dan sonra en sonda kullanilmali
+#Example kelimesi Scenario Outline dan sonra kullanilmali
 #Example verilerin kullanildagi yerdir

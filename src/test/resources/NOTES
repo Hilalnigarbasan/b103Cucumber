@@ -211,7 +211,7 @@ public class Runner {
     *RegressionTestRunner
     *TestRunner
 NOTE: Burda kullanilan taglerden en az bir tanesi feature fileda olmali. Aksi takdirde test bulunamaz
-3. Terminal/Power Shell/CMD kullanarak, maven kodu ile testleri calistir:
+3. Terminal/Power veya Shell/CMD kullanarak, maven kodu ile testleri calistir:
 mvn clean verify
 mvn clean install
 

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ExcelStepDefinitions {
-    //Page Objelerini Olustur
+    //    Page Objelerini Olustur
     HomePage homePage;
     LoginPage loginPage;
     ExcelUtils excelUtils;
@@ -24,15 +24,14 @@ public class ExcelStepDefinitions {
     public void kullanici_bilgileri_ile_giris_yapar(String sayfaAdi) throws IOException {
         String path="./src/test/resources/testdata/mysmoketestdata.xlsx";
 //        String sayfa = "customer_info";
-        excelUtils= new ExcelUtils(path,sayfaAdi);
-        excelData=excelUtils.getDataList();
-
-        for(Map<String,String> data : excelData){
-//            Ana sayfaya git
+        excelUtils = new ExcelUtils(path,sayfaAdi);
+        excelData = excelUtils.getDataList();
+//        NOTE Loop kodunu tamamla
+        for (Map<String,String> data : excelData) {
             Driver.getDriver().get(ConfigReader.getProperty("app_url"));
             homePage = new HomePage();
             loginPage = new LoginPage();
-//            ana sayfa login butonuna tikla
+//            ana sayfa login buttonuna tikla
             homePage.firstLogin.click();
             ReusableMethods.waitFor(1);
 //            emaili gonder
@@ -40,12 +39,11 @@ public class ExcelStepDefinitions {
             ReusableMethods.waitFor(1);
 //            sifre gonder
             loginPage.password.sendKeys(data.get("password"));
-            ReusableMethods.waitFor(1);
-//            login butonuna tikla
+//            login button'una tikla
             loginPage.login.click();
             ReusableMethods.waitFor(1);
-//            GIRIS YAPILDI.GIRIS YAPILDIGINI VERIFY EDELIM.
-//            ID gorunur ise giris basarilidir
+//            GIRIS YAPILDI. GIRIS YAPILDIGINI VERIFY EDELIM
+//            ID GORUNUR ISE GIRIS BASARILIDIR
             Assert.assertTrue(homePage.userID.isDisplayed());
             ReusableMethods.getScreenshot("Login_Goruntusu");
 //            LOG OUT YAPALIM
@@ -57,5 +55,16 @@ public class ExcelStepDefinitions {
             ReusableMethods.waitFor(1);
         }
         Driver.closeDriver();
+//        lambda ile
+//        excelData.forEach(data -> {
+//            Driver.getDriver().get(ConfigReader.getProperty("app_url"));
+//            homePage = new HomePage();
+//            loginPage = new LoginPage();
+//            homePage.firstLogin.click();
+//            ReusableMethods.waitFor(1);
+//            loginPage.email.sendKeys(data.get("username"));
+//            loginPage.password.sendKeys(data.get("password"));
+//            loginPage.login.click();
+//        });
     }
 }
