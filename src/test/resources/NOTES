@@ -223,6 +223,16 @@ NOTE: Bilgisayardaki terminal CMD ile tester ayni sekilde calistirilabilir
 Bu durumda projenin icine girmemiz gerekir:
 cd ABSOLUTE PATH
 cd /Users/techproed/IdeaProjects/batch103Cucumber
+
+Note: Bazen JDK versiyonuyla alakalı anotasyonların çalışmasında hata olabiliyor ozaman da şu dependency i eklemek gerek
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok-maven-plugin</artifactId>
+    <version>1.18.20.0</version>
+    <scope>provided</scope>
+</dependency>
+
+
 **********SPARK REPORTS***********
 1.resources klasorunde extent-config.xml
 <?xml version="1.0" encoding="UTF-8"?>

@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         dryRun = false
 )
 public class Runner {
-}
+} 
 //Bu sinif Test caseleri RUN etmek icin kullanilir
 //Ve konfigurasyonlar icin kullanilir
 //Runner class, features file lar ile step defitions i birbirile baglar
